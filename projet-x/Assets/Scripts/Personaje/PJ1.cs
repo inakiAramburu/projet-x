@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class PJ1 : MonoBehaviour
 {
-    public float fuerza = 100f;
-    public float salto = 300f;
+    //lo eh quitado las fuerzas porque se lo damos fuera 
+    public float fuerza;
+    public float salto ;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +22,15 @@ public class PJ1 : MonoBehaviour
         
     }
 
-    public void mover(float f)
+    public void mover(float fuerza)
     {
         if (Input.GetKey("a"))//Izquierda
         {
-            gameObject.transform.Translate(-f * Time.deltaTime, 0, 0);
+            gameObject.transform.Translate(-fuerza * Time.deltaTime, 0, 0);
         }
         else if (Input.GetKey("d"))//Derecha
         {
-            gameObject.transform.Translate(f * Time.deltaTime, 0, 0);
+            gameObject.transform.Translate(fuerza * Time.deltaTime, 0, 0);
         }
     }
 

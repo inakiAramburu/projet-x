@@ -1,69 +1,55 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Threading;
 using UnityEngine;
 
 public class PJ1 : MonoBehaviour
 {
-    //Le he quitado las fuerzas porque se lo damos fuera 
-    public float velocidad;
-    public float fuerzaSalto;
-    private bool salto = true;
 
-    private Rigidbody2D rb;
+    int salto = 1;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
     }
+
     // Update is called once per frame
-    void Update() {
-     
-    }
-
-   private void OnCollisionEnter2D(Collision2D coll)
+    void Update()
     {
-        if (coll.transform.tag == "plataforma")
+        if (Input.GetKey("a"))
         {
-            salto = true;
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-4000f * Time.deltaTime, 0));
         }
-
-    }
-    void FixedUpdate()
-    {
-        mover(velocidad * Time.deltaTime, fuerzaSalto);
-       
-    }
-    public void mover(float vel, float salt)
-    {
-        if (Input.GetKey("a"))//Izquierda
+        if (Input.GetKey("d"))
         {
-           // gameObject.transform.Translate(-vel, 0f, 0f);
-            rb.velocity = new Vector2(-vel, rb.velocity.y);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(4000f * Time.deltaTime, 0));
         }
-        else if (Input.GetKey("d"))//Derecha
+        if (Input.GetKeyDown("space") && salto<=1)
         {
-            //gameObject.transform.Translate(vel, 0f, 0f);
-            rb.velocity = new Vector2(vel, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(0f, 0f);
-        }
-        if (Input.GetKey("space") && salto)//Salto
-        {
-            
-          
-                // gameObject.transform.Translate(0f, salt *Time.deltaTime, 0f);
-                rb.AddForce(new Vector2(0f, salt));
            
-            salto = false;
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1200f));
+            salto += 1;
+        }
+        if (Input.GetKeyDown("s") )
+        {
+
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -900f));
+        }
+        if (salto>0)
+        {
+            Debug.Log(salto);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -4f));
 
         }
-
-     
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "plataforma")
+        {
+            salto = 0;
+        }
+        
+    }
+    
 }
 
-}

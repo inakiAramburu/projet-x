@@ -18,27 +18,29 @@ public class PJ1 : MonoBehaviour
     {
         if (Input.GetKey("a"))
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-4000f * Time.deltaTime, 0));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-8700f * Time.deltaTime, 0));
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         if (Input.GetKey("d"))
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(4000f * Time.deltaTime, 0));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(8700f * Time.deltaTime, 0));
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         if (Input.GetKeyDown("space") && salto<=1)
         {
            
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1200f));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1800f));
             salto += 1;
         }
-        if (Input.GetKeyDown("s") )
+        if (Input.GetKey("s") )
         {
 
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -900f));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -20f));
         }
         if (salto>0)
         {
             Debug.Log(salto);
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -4f));
+           // gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -4f));
 
         }
     }

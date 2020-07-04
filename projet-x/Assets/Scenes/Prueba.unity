@@ -1416,6 +1416,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: spawn_disparo
       objectReference: {fileID: 0}
+    - target: {fileID: 5974874057291161222, guid: 22127ef59139a8d4daff93cd952a85c1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.275
+      objectReference: {fileID: 0}
     - target: {fileID: 5974874058927130898, guid: 22127ef59139a8d4daff93cd952a85c1,
         type: 3}
       propertyPath: direccion
@@ -1456,6 +1461,16 @@ PrefabInstance:
         type: 3}
       propertyPath: L_y
       value: -0.1017
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974874058927130898, guid: 22127ef59139a8d4daff93cd952a85c1,
+        type: 3}
+      propertyPath: holaR
+      value: 0.275
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974874058927130898, guid: 22127ef59139a8d4daff93cd952a85c1,
+        type: 3}
+      propertyPath: holaL
+      value: -0.275
       objectReference: {fileID: 0}
     - target: {fileID: 5974874058927130905, guid: 22127ef59139a8d4daff93cd952a85c1,
         type: 3}

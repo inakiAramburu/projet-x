@@ -131,6 +131,7 @@ MonoBehaviour:
   spawn_disparo: {fileID: 0}
   cantidad_disparo: 10000
   Disparo: {fileID: 2415555133545656721, guid: 60b85f17d69247a4dbb1b0629376a366, type: 3}
+  hola: 2
 --- !u!50 &5974874058927130909
 Rigidbody2D:
   serializedVersion: 4

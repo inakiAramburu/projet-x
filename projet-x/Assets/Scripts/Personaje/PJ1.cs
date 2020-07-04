@@ -19,8 +19,7 @@ public class PJ1 : MonoBehaviour
     Vector3 spawn_disparo_L;
     Vector3 spawn_disparo_R;
 
-   
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +37,12 @@ public class PJ1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         Debug.Log(cantidad_disparo);
         //asignamos valores a los vectores
-        spawn_disparo_L = new Vector3(gameObject.transform.position.x + -0.2687f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
-        spawn_disparo_R = new Vector3(gameObject.transform.position.x + 0.2688f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
+        // la suma que le hacemos es con alas posiciones del spw del disparo tengo que arreglarlo 
+        spawn_disparo_L = new Vector3(gameObject.transform.position.x + -0.275f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
+        spawn_disparo_R = new Vector3(gameObject.transform.position.x + 0.275f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
        
         
         //dispara a la derecha R

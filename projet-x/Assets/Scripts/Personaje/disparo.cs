@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class disparo : MonoBehaviour
@@ -8,9 +9,9 @@ public class disparo : MonoBehaviour
     
     public float velocidad;
 
+    public int direccion;
 
-
-    public int direccion=1;
+    
 
     // Start is called before the first frame update
     void Start()

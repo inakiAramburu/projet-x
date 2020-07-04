@@ -12,15 +12,14 @@ public class PJ1 : MonoBehaviour
     [Header("Disparo")]
     public GameObject disparo;
     public Transform spawn_disparo;
-
+    public int cantidad_disparo;
+    public disparo Disparo;
 
     //swapn L new Vector3(-4.5687f, 0.6783f, 0);
     Vector3 spawn_disparo_L;
     Vector3 spawn_disparo_R;
 
-    public int cantidad_disparo;
-
-    public disparo Disparo;
+   
 
 
     // Start is called before the first frame update
@@ -39,6 +38,7 @@ public class PJ1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(cantidad_disparo);
         //asignamos valores a los vectores
         spawn_disparo_L = new Vector3(gameObject.transform.position.x + -0.2687f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
         spawn_disparo_R = new Vector3(gameObject.transform.position.x + 0.2688f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
@@ -46,23 +46,23 @@ public class PJ1 : MonoBehaviour
         
         //dispara a la derecha R
       
-        if (Input.GetKey("e")&& gameObject.GetComponent<SpriteRenderer>().flipX == false && cantidad_disparo >0 )//disparar
+        if (Input.GetKeyDown("e")&& gameObject.GetComponent<SpriteRenderer>().flipX == false && cantidad_disparo >0 )//disparar
         {
 
             Disparo.direccion = 1;
+            cantidad_disparo -= 1;
 
             Instantiate(disparo, spawn_disparo.position, spawn_disparo.rotation);
           
             
 
            
-            cantidad_disparo -= 1;
 
             
 
         }
         //dispara a la izquierda L
-        else if (Input.GetKey("e") && gameObject.GetComponent<SpriteRenderer>().flipX == true && cantidad_disparo > 0)//disparar
+        else if (Input.GetKeyDown("e") && gameObject.GetComponent<SpriteRenderer>().flipX == true && cantidad_disparo > 0)//disparar
         {
             Disparo.direccion = -1;
             Instantiate(disparo, spawn_disparo.position, spawn_disparo.rotation);
@@ -114,6 +114,7 @@ public class PJ1 : MonoBehaviour
         {
             salto = 0;
         }
+
         
     }
     

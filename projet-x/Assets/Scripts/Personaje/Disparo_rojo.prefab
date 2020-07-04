@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7844871411731026539}
   m_Layer: 0
   m_Name: Disparo_rojo
-  m_TagString: Untagged
+  m_TagString: Disparo_rojo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 40
-  direcion: 1
+  direccion: 1
+  pj1: {fileID: 5974874058927130898, guid: 22127ef59139a8d4daff93cd952a85c1, type: 3}
 --- !u!50 &-8709807083455485492
 Rigidbody2D:
   serializedVersion: 4

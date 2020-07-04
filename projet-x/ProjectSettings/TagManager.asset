@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - plataforma
+  - Disparo_rojo
   layers:
   - Default
   - TransparentFX

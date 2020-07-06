@@ -63,7 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Personaje\PJ1.cs" />
+    <Compile Include="Assets\Scripts\Personaje\PJ1\PJ1.cs" />
+    <Compile Include="Assets\Scripts\Personaje\PJ2\PJ2.cs" />
     <Compile Include="Assets\Scripts\Personaje\disparo.cs" />
     <Reference Include="UnityEngine">
       <HintPath>E:/Program Files/Unity Hub/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

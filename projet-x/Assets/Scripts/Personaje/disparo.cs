@@ -39,11 +39,14 @@ public class disparo : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "plataforma")
+        if (collision.transform.tag == "plataforma" || collision.transform.tag == "Disparo" || collision.transform.tag == "Disparo_azul" || collision.transform.tag == "Disparo_rojo" ||collision.transform.tag == "PJ" )
         {
             Destroy(gameObject, 0.03f);
         }
-
+        if ( collision.transform.tag == "PJ")
+        {
+            Debug.Log("colision");
+        }
     }
 
     

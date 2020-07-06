@@ -6,6 +6,10 @@ TagManager:
   tags:
   - plataforma
   - Disparo_rojo
+  - PJ
+  - Disparo_azul
+  - Disparo
+  - Lava
   layers:
   - Default
   - TransparentFX

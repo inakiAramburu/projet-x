@@ -9,7 +9,7 @@ public class PJ1 : MonoBehaviour
     [SerializeField] float velocidad =8500;
     [SerializeField] private int saltos = 1;
     [SerializeField] private bool rotar = false; //Si es False mira a la derecha, si es True a la izquierda
-
+    
     [SerializeField] private Transform firePoint;
     public GameObject bala;
 
@@ -18,7 +18,9 @@ public class PJ1 : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-
+        if (rotar) {
+            transform.Rotate(0f, 180f, 0f);
+        }
     }
 
     // Update is called once per frame

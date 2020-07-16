@@ -19,7 +19,9 @@ public class PJ2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (rotar) {
+            transform.Rotate(0f, 180f, 0f);
+        }
     }
 
     // Update is called once per frame

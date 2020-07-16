@@ -12,6 +12,9 @@ public class PJ1 : MonoBehaviour
     [Header("Disparo")]
     public GameObject disparo;
     public Transform spawn_disparo;
+
+    [SerializeField] private Transform firePoint;
+
     public int cantidad_disparo;
     public disparo Disparo;
 
@@ -26,10 +29,11 @@ public class PJ1 : MonoBehaviour
     {
 
 
+        
 
 
 
-       
+
 
 
     }
@@ -37,16 +41,16 @@ public class PJ1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-      //  Debug.Log(cantidad_disparo);
+        Debug.Log(firePoint.position.x);
+        //  Debug.Log(cantidad_disparo);
         //asignamos valores a los vectores
         // la suma que le hacemos es con alas posiciones del spw del disparo tengo que arreglarlo 
-        spawn_disparo_L = new Vector3(gameObject.transform.position.x + -0.2935f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
+       spawn_disparo_L = new Vector3(gameObject.transform.position.x + -0.2935f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
         spawn_disparo_R = new Vector3(gameObject.transform.position.x + 0.2935f, gameObject.transform.position.y + -0.1017f, spawn_disparo.transform.position.z);
-       
+
         
         //dispara a la derecha R
-      
+
         if (Input.GetKeyDown("e")&& gameObject.GetComponent<SpriteRenderer>().flipX == false && cantidad_disparo >0 )//disparar
         {
 
